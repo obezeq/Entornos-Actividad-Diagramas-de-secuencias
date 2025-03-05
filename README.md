@@ -7,14 +7,14 @@
 
 ```
 @startuml
-' DEFINO AQUI LOS PARTICIPANTES CON SUS ESTEREOTIPOS
+' DEFINO AQUI LOS PARTICIPANTES CON SUS ESTEREOTIPOS.
 actor Usuario
 participant "Interfaz Usuario" as IU <<Boundary>>
 participant "Control Transacción" as CT <<Control>>
 participant "Entidad Cuenta" as EC <<Entity>>
 participant "Banco" as Banco <<Boundary>>
 
-' DIAGRAMA DE VALIDACIÓN DE USUARIO
+' DIAGRAMA DE VALIDACIÓN DE USUARIO.
 
 == Validación Usuario ==
 Usuario -> IU: Ingresar credenciales
@@ -24,16 +24,16 @@ EC -->> CT: Respuesta validación
 CT --> IU: Resultado validación
 IU -> Usuario: Mostrar resultado
 
-' DIAGRAMA PARA SACAR DINERO
+' DIAGRAMA PARA SACAR DINERO.
 
 == Sacar Dinero ==
 Usuario -> IU: Solicitar retiro
 IU ->> CT: Enviar solicitud
 CT ->> EC: Verificar saldo
 EC -->> CT: Confirmar saldo suficiente
-CT ->> EC: Descontar monto
+CT ->> EC: Descontar cantidad dinero
 EC -->> CT: Confirmación de transacción
-CT -\ Banco: Solicitar dispensación de dinero
+CT -\ Banco: Solicitar dispensar dinero
 Banco -->> Usuario: Entregar dinero
 CT --> IU: Confirmar operación
 IU -> Usuario: Mostrar confirmación
@@ -46,3 +46,5 @@ IU -> Usuario: Mostrar confirmación
 - La visualización del tiempo te permite ver el orden en el que pueden ocurrir las peticiones y como interactua más a fondo el programa desde este punto de vista.
 
 - Para mi otra ventaja espectacular que tiene los diagramas de secuencia, es que puedes observar facilmente si la conexión es simple, sincrona, asincrona, o si te da una respuesta. De esta forma puedes ver de forma muy visual que tipo de actividad/conexión se esta realizando entre cada entidad.
+
+- Además creo que este diagrama de secuencias se puede complementar muy bien con otros tipos de diagramas que se pueden desarrollar, pues es muy complementario y de mucha ayuda si tienes otros diagramas conjuntos.
