@@ -46,5 +46,3 @@ IU -> Usuario: Mostrar confirmación
 - La visualización del tiempo te permite ver el orden en el que pueden ocurrir las peticiones y como interactua más a fondo el programa desde este punto de vista.
 
 - Para mi otra ventaja espectacular que tiene los diagramas de secuencia, es que puedes observar facilmente si la conexión es simple, sincrona, asincrona, o si te da una respuesta. De esta forma puedes ver de forma muy visual que tipo de actividad/conexión se esta realizando entre cada entidad.
-
-- 
